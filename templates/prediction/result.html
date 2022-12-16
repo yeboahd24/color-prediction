@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Color Prediction Result</title>
+    <style>
+        /* Add some basic styling for the result element */
+        h1 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        .result {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            margin: 0 auto;
+        }
+        .result-color {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+        .result-text {
+            font-size: 24px;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Prediction Result</h1>
+    <div class="result">
+        <div class="result-color" style="background-color:{{ color.hex_code }}">
+            <p class="result-text">{{ color.name }}</p>
+        </div>
+    </div>
+</body>
+</html>

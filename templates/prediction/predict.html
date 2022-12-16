@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Color Prediction App</title>
+    <style>
+        /* Add some basic styling for the form elements */
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        label {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        }
+        input[type="number"] {
+            width: 80px;
+            height: 30px;
+            font-size: 16px;
+            padding: 0 10px;
+        }
+        button[type="submit"] {
+            width: 100px;
+            height: 40px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Color Prediction App</h1>
+    <form method="post">
+        {% csrf_token %}
+        {% for field in form %}
+            {{ field.label_tag }} {{ field }}
+        {% endfor %}
+        <button type="submit">Predict</button>
+    </form>
+</body>
+</html>
